@@ -26,7 +26,14 @@ class PrimeRequester {
             }
             
             guard let data = data else { return }
-            print("Request success: \(data)")
+            
+            do {
+                if let result = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
+                    print("Request success: \(result) \(result["data"] ?? "nil")")
+                }
+            } catch {
+                print(error)
+            }
         }
         task.resume()
     }
