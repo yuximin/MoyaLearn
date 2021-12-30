@@ -13,7 +13,9 @@
 		0392B5B82770294900CD0B97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0392B5B62770294900CD0B97 /* Main.storyboard */; };
 		0392B5BA2770294A00CD0B97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0392B5B92770294A00CD0B97 /* Assets.xcassets */; };
 		0392B5BD2770294A00CD0B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0392B5BB2770294A00CD0B97 /* LaunchScreen.storyboard */; };
-		0392B5C6277030DE00CD0B97 /* PrimeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392B5C5277030DE00CD0B97 /* PrimeRequester.swift */; };
+		0392B5C6277030DE00CD0B97 /* YRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0392B5C5277030DE00CD0B97 /* YRequester.swift */; };
+		183FB75227746F9A00E5FF75 /* YResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FB75127746F9A00E5FF75 /* YResponseModel.swift */; };
+		183FB75527759EAE00E5FF75 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FB75427759EAE00E5FF75 /* MyService.swift */; };
 		849E80E1BBF35E7FDCB57BF9 /* Pods_MoyaLearn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED172A6C337382D2A5E23C7A /* Pods_MoyaLearn.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +28,9 @@
 		0392B5B92770294A00CD0B97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0392B5BC2770294A00CD0B97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0392B5BE2770294A00CD0B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0392B5C5277030DE00CD0B97 /* PrimeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeRequester.swift; sourceTree = "<group>"; };
+		0392B5C5277030DE00CD0B97 /* YRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YRequester.swift; sourceTree = "<group>"; };
+		183FB75127746F9A00E5FF75 /* YResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YResponseModel.swift; sourceTree = "<group>"; };
+		183FB75427759EAE00E5FF75 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		523BEBF476527FFB61BC88A6 /* Pods-MoyaLearn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLearn.release.xcconfig"; path = "Target Support Files/Pods-MoyaLearn/Pods-MoyaLearn.release.xcconfig"; sourceTree = "<group>"; };
 		5C04ECEC494A95B6FC75C4D1 /* Pods-MoyaLearn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoyaLearn.debug.xcconfig"; path = "Target Support Files/Pods-MoyaLearn/Pods-MoyaLearn.debug.xcconfig"; sourceTree = "<group>"; };
 		ED172A6C337382D2A5E23C7A /* Pods_MoyaLearn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoyaLearn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +69,8 @@
 		0392B5AF2770294900CD0B97 /* MoyaLearn */ = {
 			isa = PBXGroup;
 			children = (
-				0392B5C427702FFD00CD0B97 /* PrimeRequest */,
+				183FB75027746E1600E5FF75 /* Modal */,
+				0392B5C427702FFD00CD0B97 /* Requester */,
 				0392B5B02770294900CD0B97 /* AppDelegate.swift */,
 				0392B5B22770294900CD0B97 /* SceneDelegate.swift */,
 				0392B5B42770294900CD0B97 /* ViewController.swift */,
@@ -77,12 +82,29 @@
 			path = MoyaLearn;
 			sourceTree = "<group>";
 		};
-		0392B5C427702FFD00CD0B97 /* PrimeRequest */ = {
+		0392B5C427702FFD00CD0B97 /* Requester */ = {
 			isa = PBXGroup;
 			children = (
-				0392B5C5277030DE00CD0B97 /* PrimeRequester.swift */,
+				183FB75327759E4500E5FF75 /* Moya */,
+				0392B5C5277030DE00CD0B97 /* YRequester.swift */,
 			);
-			path = PrimeRequest;
+			path = Requester;
+			sourceTree = "<group>";
+		};
+		183FB75027746E1600E5FF75 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				183FB75127746F9A00E5FF75 /* YResponseModel.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		183FB75327759E4500E5FF75 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				183FB75427759EAE00E5FF75 /* MyService.swift */,
+			);
+			path = Moya;
 			sourceTree = "<group>";
 		};
 		4D104B61A7E330F605A6CBB6 /* Pods */ = {
@@ -217,10 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0392B5C6277030DE00CD0B97 /* PrimeRequester.swift in Sources */,
+				0392B5C6277030DE00CD0B97 /* YRequester.swift in Sources */,
 				0392B5B52770294900CD0B97 /* ViewController.swift in Sources */,
 				0392B5B12770294900CD0B97 /* AppDelegate.swift in Sources */,
+				183FB75527759EAE00E5FF75 /* MyService.swift in Sources */,
 				0392B5B32770294900CD0B97 /* SceneDelegate.swift in Sources */,
+				183FB75227746F9A00E5FF75 /* YResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
